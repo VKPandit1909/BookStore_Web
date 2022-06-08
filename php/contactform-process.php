@@ -69,11 +69,11 @@ use PHPMailer\PHPMailer\PHPMailer;
     // echo $course;
 
 
-    require_once "../PHPMailer/PHPMailer.php";
+    require_once "PHPMailer/PHPMailer.php";
     
     
-    require_once "../PHPMailer/SMTP.php";
-    require_once "../PHPMailer/Exception.php";
+    require_once "PHPMailer/SMTP.php";
+    require_once "PHPMailer/Exception.php";
 
     $mail = new PHPMailer();
 
@@ -100,10 +100,11 @@ use PHPMailer\PHPMailer\PHPMailer;
     else
     {
         $status = "failed";
-        $response = "Something is wrong: <br>" . $mail->ErrorInfo;
+        // $response = "Something is wrong: <br>" . $mail->ErrorInfo;
+        $response="We are unable to get your request. Please mail us!!";
     }
 
-    exit(json_encode(array("status" => $status, "response" => $response)));
+    exit(json_encode(array( $response)));
 
 
 ?>
