@@ -1070,18 +1070,18 @@
             <h2>CONTACT</h2>
             <ul class="list-unstyled li-space-lg">
               <li class="address">
-                Don't hesitate to give us a call or just use the contact form
+                Don't hesitate to give us a mail or just use the contact form
                 below
               </li>
               <!-- <li><i class="fas fa-map-marker-alt"></i>22 Innovative, San Francisco, CA 94043, US</li> -->
-              <li>
+              <!-- <li>
                 <i class="fas fa-phone"></i
                 ><a class="blue" href="tel:+917021684702">+91 702 168 4702</a>
               </li>
               <li>
                 <i class="fas fa-phone"></i
                 ><a class="blue" href="tel:+918208230693">+91 820 823 0693</a>
-              </li>
+              </li> -->
               <li>
                 <i class="fas fa-envelope"></i
                 ><a class="blue" href="mailto:thedebugarena@gmail.com"

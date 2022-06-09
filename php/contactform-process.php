@@ -10,7 +10,7 @@ if (empty($_POST["name"])) {
 if (empty($_POST["email"])) {
     $errorMSG = "Email is required ";
 } else {
-    $email = $_POST["email"];
+    $email_from = $_POST["email"];
 }
 
 if (empty($_POST["message"])) {
@@ -73,16 +73,17 @@ $mail->setOAuth(
     )
 );
  
-$mail->setFrom('vickybff756@gmail.com', 'Vicky Kumar');
+$mail->setFrom('thedebugarena@gmail.com', 'Vicky Kumar');
 $mail->addAddress('vkpandit1909@gmail.com', 'Vikram Pandit');
+$mail->addAddress('adarshthakur210@gmail.com', 'Adarsh Thakur');
 $mail->isHTML(true);
 $mail->Subject = "New Message from $name";
-$mail->Body ="Name: $name <br> Email:$email <br> Message:$message";
+$mail->Body ="Name: $name <br> Email: $email_from <br> Message: $message";
  
 //send the message, check for errors
 if ($mail->send()) {
     $status = "success";
-    $response = "Email is sent!";
+    $response = "Email is sent! We'll get back to you soon.";
 } else {
     $status = "failed";
     // $response = "Something is wrong: <br>" . $mail->ErrorInfo;
